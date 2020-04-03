@@ -29,6 +29,6 @@ public class MinifyTest
     @Order(2)
     void validateFileDecompression()
     {
-        assertDoesNotThrow(() -> new String[] {"revertFiles"});
+        assertDoesNotThrow(() -> Minify.main(new String[] {"revertFiles"}));
     }
 }
