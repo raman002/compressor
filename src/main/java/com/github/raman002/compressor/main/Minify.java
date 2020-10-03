@@ -61,7 +61,7 @@ public class Minify implements Serializable
             return;
         }
 
-        final String directoryPath = argumentsList.stream().filter(arg -> arg.startsWith("path:")).findFirst().orElse("/src");
+        final String directoryPath = argumentsList.stream().filter(arg -> arg.startsWith("path:")).findFirst().map(p -> p.split("path:")[1]).orElse("/src");
 
         minify.scanFiles(directoryPath);
         minify.startCompression();
