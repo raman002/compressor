@@ -34,6 +34,15 @@ If you already have a `<build>` tag then you can simply copy `<plugins>` tag.
 
 ```
 <build>
+ <resources>
+		<resource>
+			<directory>src/main/resources</directory>
+			<excludes>
+				<exclude>**/*.temp</exclude>
+			</excludes>
+			<filtering>false</filtering>
+		</resource>
+  </resources>
  <plugins>
     <plugin>
         <groupId>org.codehaus.mojo</groupId>
